@@ -1,0 +1,3 @@
+node gpd {
+  include masterless
+}
