@@ -1,3 +1,7 @@
 class software {
-  include software::cron
+  include software::core
+  include software::photography
+  include software::gaming
+  include software::office
+  include software::theme
 }
