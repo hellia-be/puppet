@@ -1,3 +1,3 @@
-node gpd {
+node /gpd/ {
   include masterless
 }
