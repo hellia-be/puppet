@@ -82,4 +82,10 @@ class software::core {
     command => '/usr/bin/yay -S --sudoloop --noconfirm --save font-victor-mono',
     unless => '/usr/bin/pacman -Qi font-victor-mono',
   }
+  package { 'bash-completion':
+    ensure => installed,
+  }
+  package { 'bash-git-prompt':
+    ensure => installed,
+  }
 }
