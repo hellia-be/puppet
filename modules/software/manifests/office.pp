@@ -2,10 +2,10 @@ class software::office {
   package { 'libreoffice-fresh':
     ensure => installed,
   }
-  package { 'transmission-gtk':
+  package { 'signal-desktop':
     ensure => installed,
   }
-  package { 'fractal':
+  package { 'transmission-gtk':
     ensure => installed,
   }
 }
