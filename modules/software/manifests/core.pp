@@ -2,18 +2,6 @@ class software::core {
   package { 'cronie':
     ensure => installed,
   }
-  package { 'lastpass-cli':
-    ensure => installed,
-  }
-  package { 'xsel':
-    ensure => installed,
-  }
-  package { 'dmenu':
-    ensure => installed,
-  }
-  package { 'terminator':
-    ensure => installed,
-  }
   package { 'firefox':
     ensure => installed,
   }
@@ -35,28 +23,7 @@ class software::core {
   package { 'linux-zen-headers':
     ensure => installed,
   }
-  package { 'lxappearance':
-    ensure => installed,
-  }
   package { 'mpv':
-    ensure => installed,
-  }
-  package { 'pcmanfm':
-    ensure => installed,
-  }
-  package { 'spectrwm':
-    ensure => installed,
-  }
-  package { 'xlockmore':
-    ensure => installed,
-  }
-  package { 'dunst':
-    ensure => installed,
-  }
-  package { 'nitrogen':
-    ensure => installed,
-  }
-  package { 'scrot':
     ensure => installed,
   }
   exec { 'xcursor-breeze':
