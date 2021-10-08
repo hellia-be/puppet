@@ -54,4 +54,7 @@ class software::core {
   package { 'bash-git-prompt':
     ensure => installed,
   }
+  package { 'timeshift':
+    ensure => installed,
+  }
 }
