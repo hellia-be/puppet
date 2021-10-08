@@ -3,5 +3,4 @@ class software {
   include software::photography
   include software::gaming
   include software::office
-  include software::theme
 }

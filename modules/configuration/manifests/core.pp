@@ -15,4 +15,11 @@ class configuration::core {
     mode => '0644',
     source => 'https://raw.githubusercontent.com/hellia-be/dotfiles/master/pacman/pacman.conf',
   }
+  file { '/etc/X11/xorg.conf.d/10-display.conf':
+    ensure => file,
+    group  => 'root',
+    owner  => 'root',
+    mode   => '0644',
+    source => 'https://raw.githubusercontent.com/hellia-be/dotfiles/main/xorg/10-display.conf',
+  }
 }
