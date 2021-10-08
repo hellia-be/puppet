@@ -24,7 +24,7 @@ class distcc {
     require => File['/etc/systemd/system/distccd8.service'],
   }
   exec { 'crosstool-ng':
-    command => "wget https://archlinuxarm.org/builder/xtools/x-tools8.tar.xz && tar xvf x-tools8.tar.xz",
+    command => "/usr/bin/wget https://archlinuxarm.org/builder/xtools/x-tools8.tar.xz && tar xvf x-tools8.tar.xz",
     creates => '/home/hellia/Documents/x-tools8/aarch64-unknown-linux-gnu/bin/aarch64-unknown-linux-gnu-gcc',
     cwd     => '/home/hellia/Documents',
     user    => 'hellia',
