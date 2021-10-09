@@ -10,3 +10,10 @@ node /desktop/ {
   include configuration
   include distcc
 }
+
+node /thinkpad/ {
+  include masterless
+  include software
+  include configuration
+  include distcc
+}
