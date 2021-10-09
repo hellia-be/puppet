@@ -72,7 +72,7 @@ class software::core {
   }
   package { 'gnome-shell-extension-nordvpn-connect-git':
     ensure  => installed,
-    require => Exec['nordvpn-bin'],
+    require => Package['nordvpn-bin'],
   }
   package { 'nordvpn-bin':
     ensure => installed,
