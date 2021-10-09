@@ -16,4 +16,5 @@ node /thinkpad/ {
   include software
   include configuration
   include distcc
+  include sound
 }
