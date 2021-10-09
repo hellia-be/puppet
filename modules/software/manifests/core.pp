@@ -1,4 +1,7 @@
 class software::core {
+  package { 'gparted':
+    ensure => installed,
+  }
   package { 'cronie':
     ensure => installed,
   }
