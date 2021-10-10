@@ -22,6 +22,5 @@ node /thinkpad/ {
 node /mediaserver/ {
   include masterless
   include software
-  include configuration
   include mediaserver
 }
