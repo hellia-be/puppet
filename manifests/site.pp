@@ -18,3 +18,10 @@ node /thinkpad/ {
   include distcc
   include sound
 }
+
+node /mediaserver/ {
+  include masterless
+  include software
+  include configuration
+  include mediaserver
+}
