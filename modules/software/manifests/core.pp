@@ -1,4 +1,7 @@
 class software::core {
+  package { 'inetutils':
+    ensure => installed,
+  }
   package { 'gparted':
     ensure => installed,
   }
