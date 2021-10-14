@@ -1,12 +1,4 @@
 class mediaserver {
-  package { 'jellyfin':
-    ensure => installed,
-  }
-  service { 'jellyfin.service':
-    ensure  => running,
-    enable  => true,
-    require => Package['jellyfin'],
-  }
   package { 'plex-media-server':
     ensure => installed,
   }
