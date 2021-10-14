@@ -1,4 +1,7 @@
 class software::core {
+  package { 'chrome-gnome-shell':
+    ensure => installed,
+  }
   package { 'inetutils':
     ensure => installed,
   }
