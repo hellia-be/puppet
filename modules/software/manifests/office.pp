@@ -1,4 +1,10 @@
 class software::office {
+  package { 'docker':
+    ensure => installed,
+  }
+  package { 'balena-cli-bin':
+    ensure => installed,
+  }
   package { 'libreoffice-fresh':
     ensure => installed,
   }
