@@ -1,4 +1,7 @@
 class software::office {
+  package { 'simplenote-electron-bin':
+    ensure => installed,
+  }
   package { 'docker':
     ensure => installed,
   }
