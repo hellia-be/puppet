@@ -1,4 +1,7 @@
 class software::core {
+  package { 'vinagre':
+    ensure => installed,
+  }
   package { 'f2fs-tools':
     ensure => installed,
   }
