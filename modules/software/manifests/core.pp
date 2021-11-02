@@ -1,4 +1,7 @@
 class software::core {
+  package { 'f2fs-tools':
+    ensure => installed,
+  }
   package { 'squashfs-tools':
     ensure => installed,
   }
