@@ -1,4 +1,7 @@
 class software::core {
+  package { 'squashfs-tools':
+    ensure => installed,
+  }
   package { 'chrome-gnome-shell':
     ensure => installed,
   }
