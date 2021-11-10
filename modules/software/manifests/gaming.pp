@@ -1,4 +1,7 @@
 class software::gaming {
+  package { 'miniongg':
+    ensure => installed,
+  }
   package { 'discord':
     ensure => installed,
   }
