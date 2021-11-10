@@ -3,10 +3,10 @@ class software::office {
     ensure => installed,
   }
   package { 'docker':
-    ensure => installed,
+    ensure => absent,
   }
   package { 'balena-cli-bin':
-    ensure => installed,
+    ensure => absent,
   }
   package { 'libreoffice-fresh':
     ensure => installed,
@@ -15,12 +15,12 @@ class software::office {
     ensure => installed,
   }
   package { 'rocketchat-desktop':
-    ensure => installed,
+    ensure => absent,
   }
   package { 'thunderbird':
-    ensure => installed,
+    ensure => absent,
   }
   package { 'sshuttle':
-    ensure => installed,
+    ensure => absent,
   }
 }
