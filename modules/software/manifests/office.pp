@@ -12,6 +12,9 @@ class software::office {
     ensure => installed,
   }
   package { 'fractal':
+    ensure => absent,
+  }
+  package { 'signal-desktop':
     ensure => installed,
   }
   package { 'rocketchat-desktop':
