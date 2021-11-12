@@ -1,4 +1,7 @@
 class software::core {
+  package { 'ntfs-3g':
+    ensure => installed,
+  }
   package { 'vinagre':
     ensure => installed,
   }
