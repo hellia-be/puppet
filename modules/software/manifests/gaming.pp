@@ -14,4 +14,7 @@ class software::gaming {
   package { 'ttf-ms-fonts':
     ensure => installed,
   }
+  package { 'lutris':
+    ensure => installed,
+  }
 }
