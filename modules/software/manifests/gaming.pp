@@ -152,7 +152,4 @@ class software::gaming {
   package { 'lib32-vulkan-icd-loader':
     ensure => installed,
   }
-  package { 'wine-gaming-nine':
-    ensure => installed,
-  }
 }
