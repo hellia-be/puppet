@@ -53,7 +53,7 @@ class software::gaming {
   package { 'openal':
     ensure => installed,
   }
-  package { 'lib32-openal'
+  package { 'lib32-openal':
     ensure => installed,
   }
   package { 'v4l-utils':
