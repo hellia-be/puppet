@@ -122,12 +122,6 @@ class software::gaming {
   package { 'lib32-ncurses':
     ensure => installed,
   }
-  package { 'opencl-icd-loader':
-    ensure => installed,
-  }
-  package { 'lib32-opencl-icd-loader':
-    ensure => installed,
-  }
   package { 'libxslt':
     ensure => installed,
   }
