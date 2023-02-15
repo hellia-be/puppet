@@ -5,7 +5,6 @@ class software::hyprland (
   $packages = [
     'polkit-gnome',
     'ffmpeg',
-    'neovim',
     'viewnior',
     'rofi',
     'pavucontrol',
@@ -35,6 +34,7 @@ class software::hyprland (
     'gvfs-smb',
     'smbclient',
     'bash-completion',
+    'pacman-contrib',
   ]
 
   $packages.each |String $package| {
@@ -252,5 +252,12 @@ class software::hyprland (
     owner  => $username,
     group  => $username,
     source => 'puppet:///modules/software/inputrc',
+  }
+
+  file { "/home/${username}/.vimrc":
+    ensure => file,
+    owner  => $username,
+    group  => $username,
+    source => 'puppet:///modules/software/vimrc',
   }
 }

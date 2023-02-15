@@ -49,3 +49,7 @@ shopt -s cdspell
 # Starship specific
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
 eval "$(starship init bash)"
+
+# git specific
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519_hellia
