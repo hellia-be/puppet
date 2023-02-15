@@ -13,10 +13,10 @@ class software::systemdboot(
   }
 
   file { '/boot/loader/entries/linux-lts.conf':
-    ensure => file,
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0755',
-    source => epp('software/linux-lts.epp', {'uuid' => $uuid}),
+    ensure  => file,
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0755',
+    content => epp('software/linux-lts.epp', {'uuid' => $uuid}),
   }
 }
