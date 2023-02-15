@@ -10,11 +10,15 @@ class masterless () {
     group  => 'root',
   }
 
+  package { 'cronie':
+    ensure => latest,
+  }
+
   cron { 'puppet-apply':
     ensure  => present,
     command => 'cd /etc/puppet && /usr/bin/git pull',
     user    => 'root',
     minute  => '*/30',
-    require => File['post-hook'],
+    require => [File['post-hook'],Package['cronie'],],
   }
 }
