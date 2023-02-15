@@ -12,7 +12,6 @@ class software::mkinitcpio () {
 
   exec { 'mkinitcpio':
     command   => '/usr/bin/mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img',
-    user      => 'root',
     subscribe => File['/etc/mkinitcpio.conf'],
   }
 }
