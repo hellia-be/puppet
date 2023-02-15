@@ -74,6 +74,12 @@ class software::hyprland (
     content => template('software/wrapped-hl.erb'),
   }
 
+  file { "/home/${username}/.config":
+    ensure => directory,
+    owner  => $username,
+    group  => $username,
+  }
+
   file { "/home/${username}/.config/dunst":
     ensure => directory,
     owner  => $username,
