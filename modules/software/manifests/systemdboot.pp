@@ -17,6 +17,6 @@ class software::systemdboot(
     owner  => 'root',
     group  => 'root',
     mode   => '0755',
-    source => template(software/linux-lts.erb),
+    source => epp('software/linux-lts.epp', {'uuid' => $uuid}),
   }
 }
