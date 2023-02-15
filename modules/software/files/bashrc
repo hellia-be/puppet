@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# Enable bash programmable completion features in interactive shells
+if [ -f /usr/share/bash-completion/bash_completion ]; then
+	. /usr/share/bash-completion/bash_completion
+elif [ -f /etc/bash_completion ]; then
+	. /etc/bash_completion
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
+	PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# User specific aliases and functions
+alias ls='ls --color --classify --human-readable'
+alias ll='ls -l'
+alias update='yay -Syu'
+alias upgrade='yay -Syu'
+alias install='yay -S'
+alias remove='yay -Rns'
+alias search='yay'
+alias clean='sudo paccache -rk1 && yay -Sc && yay -Rns $(pacman -Qtdq)'
+alias rebuild="yay -S $(pacman -Qm | awk '{ print $1 }')"
+alias ikey='gpg --keyserver keyserver.ubuntu.com --recv'
+alias cp='/bin/cp -i'
+alias mv='/bin/mv -i'
+alias rm='/bin/rm -i'
+alias mksrcinfo='makepkg --printsrcinfo > .SRCINFO'
+alias puppet='su -c "cd /etc/puppet && git pull"'
+
+# Defaults
+export EDITOR='vim'
+export VISUAL='vim'
+export MAKEFLAGS="-j$(nproc)"
+
+# cd on dir name
+shopt -s autocd
+
+# spellcheck for dir names
+shopt -s cdspell
+
+# Starship specific
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+eval "$(starship init bash)"

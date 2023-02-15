@@ -1,0 +1,5 @@
+title Arch Linux (linux-zen)
+linux /vmlinuz-linux-zen
+initrd /intel-ucode.img
+initrd /initramfs-linux-zen.img
+options root=PARTUUID=<%= @uuid %> zswap.enabled=0 rootflags=subvol=@ rw intel_pstate=no_hwp rootfstype=btrfs nvidia_drm.modeset=1
